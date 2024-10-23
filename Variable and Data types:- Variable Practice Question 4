@@ -1,0 +1,42 @@
+import java.io.*; // Importing the I/O package (not used in this program but commonly included)
+import java.util.*; // Importing the utility package (not necessary here since no utility classes are used)
+
+public class Main {
+    public static void main(String[] args) {
+        // Declare and initialize two integer variables
+        int a = 1042; // The dividend
+        int b = 7;    // The divisor
+
+        // Calculate the quotient of a divided by b
+        int quo = a / b; // Integer division to get the quotient
+        // Calculate the remainder of a divided by b
+        int rem = a % b; // Modulus operation to get the remainder
+
+        // Print the quotient followed by a space
+        System.out.print(quo);
+        System.out.print(" "); // Print a space for formatting
+
+        // Print the remainder
+        System.out.print(rem);
+    }
+}
+
+
+
+
+Variable Practice Question 4
+Declare two variables as a and b. Initialize the values to those variables as 1042 and 7 respectively.
+
+Declare another two variables quo and rem that will store the quotient and remainder of these numbers taking a as dividend and b as divisor.
+
+Print quo and rem in a line separated by a space.
+
+Input Format
+No input. User has to declare the variables themselves.
+
+Output Format
+Print the quotient and remainder of these numbers by taking a as dividend and b as divisor.
+
+Output:
+
+148 6 

@@ -1,0 +1,65 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        // your code here
+        int n=10;
+        System.out.print("My num is"+ " " +n);
+    }
+}
+
+Variable Practice Question 1
+Declare a variable named var and assign it a value of 10. Then print the string “My num is ” (without quotes) followed by the value stored in the variable.
+
+Input Format
+No input.
+
+Output Format
+Print the string “My num is ” followed by the value stored in the variable.
+
+Output:
+
+My num is 10
+
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        // your code here
+       float var = 10.45f;
+
+        // Re-initialize the variable
+        var = 20.55f;
+
+        // Print the variable
+        System.out.println(var);
+       
+    }
+}
+
+
+
+Variable Practice Question 2
+Declare a variable of type float named var and initialize its value to 10.45
+
+After that re-initialize its value to 20.55 and print the variable var
+
+Input Format
+There is no input in this question
+
+Output Format
+Print value of variable var
+
+Example 1
+Input
+
+No Input
+Output
+
+20.55
+

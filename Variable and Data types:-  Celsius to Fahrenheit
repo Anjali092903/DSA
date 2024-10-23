@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input the temperature in Celsius
+        int tempInCelsius = sc.nextInt();
+
+        // Convert Celsius to Fahrenheit using the formula: (C * (9/5)) + 32
+        int tempInFahrenheit = (tempInCelsius * 9 / 5) + 32;
+
+        // Output the temperature in Fahrenheit
+        System.out.println(tempInFahrenheit);
+    }
+}

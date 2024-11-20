@@ -7,7 +7,7 @@ public class Main {
             return 0;
         }
         // Check if the current element is 11
-        int count = (nums[index] == 11) ? 1 : 0;
+        int count = (nums[index] == 11) ? 1 : 0;     
        // Recursive call for the rest of the array
         return count + array11(nums, index + 1);
     }
@@ -32,6 +32,20 @@ public class Main {
 
 
 
+
+
+
+
+ // Check if the current element is 11
+       int count;
+      if (nums[index] == 11) {
+            count = 1; // If the current element is 11, set count to 1
+    } else {
+      count = 0; // Otherwise, set count to 0
+        }
+
+alternate 
+    int count = (nums[index] == 11) ? 1 : 0;
 
 
 

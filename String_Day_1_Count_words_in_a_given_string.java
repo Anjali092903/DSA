@@ -37,8 +37,17 @@ class Main {
       }
     }
     return count;
+
+    
+    
+    // split method     String [] arr=s.split(" ");
+                         return arr.lenth;
+   
   }
 }
+
+
+
 
 
 

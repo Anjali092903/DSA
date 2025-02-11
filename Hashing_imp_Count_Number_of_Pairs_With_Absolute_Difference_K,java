@@ -1,0 +1,101 @@
+import java.io.*;
+import java.util.*;
+
+class Solution {
+    public long pairDifference(int[] A, int n, int k) {
+        // Use a HashSet to store unique elements
+        Set<Integer> uniqueElements = new HashSet<>();
+        // Use a HashSet to store pairs to ensure they are distinct
+        Set<String> pairs = new HashSet<>();
+        
+        for (int i = 0; i < n; i++) {
+            int current = A[i];
+            // Check for the pair (current, current + k)
+            if (uniqueElements.contains(current + k)) {
+                // Create a sorted pair representation
+                String pair = Math.min(current, current + k) + "," + Math.max(current, current + k);
+                pairs.add(pair);
+            }
+            // Check for the pair (current, current - k)
+            if (uniqueElements.contains(current - k)) {
+                // Create a sorted pair representation
+                String pair = Math.min(current, current - k) + "," + Math.max(current, current - k);
+                pairs.add(pair);
+            }
+            // Add the current element to the set of unique elements
+            uniqueElements.add(current);
+        }
+        
+        // The number of distinct pairs is the size of the pairs set
+        return pairs.size();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n, k;
+        n = sc.nextInt();
+        k = sc.nextInt();
+        int[] mat = new int[n];
+        for (int i = 0; i < n; ++i) {
+            mat[i] = sc.nextInt();
+        }
+        Solution Obj = new Solution();
+        System.out.println(Obj.pairDifference(mat, n, k));
+        System.out.println('\n');
+    }
+}
+
+
+
+Count Number of Pairs With Absolute Difference K
+Given an integer array A and a non-negative integer k. Count all distinct unordered pairs of (A[i], A[j]) such that A[i] - A[j] = k and i != j.
+
+Here A[i] and A[j] are array elements at indexes i and j respectively.
+
+Input Format
+First line contains two integers n(denoting size of array) and k.
+
+Second line contains n integers denoting elements of array.
+
+Output Format
+Print number of distinct unordered pairs of (A[i], A[j]) with difference equal to k.
+
+Example 1
+Input
+
+5 0
+1 5 4 1 2
+Output
+
+1
+Explanation
+
+The only unordered pair with difference 0 is (1, 1).
+
+Example 2
+Input
+
+4 1
+1 2 2 1
+Output
+
+1
+Explanation
+
+The only unordered pair with difference 1 is (1, 2).
+
+Constraints
+1 <= n <= 10^5
+
+-10^5 <= k <= 10^5
+
+1 <= A[i] <= 10^5
+
+Topics
+Arrays
+Hashing
+Companies
+Facebook
+Amazon
